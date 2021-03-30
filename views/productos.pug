@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{nombreSitio} | #{pagina}
+        link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+        
+
+
+
+block container
+    .row
+
+        .col-md-12.mt-5
+            h1#back.d-block.w-100.text-center INFORMACIÓN DE LA RESERVA
+
+            if(errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center= error.mensaje
+    form(action="/productos", method="POST").my-5.mx-5
+        .row
+            .col-md-3   
+                input.form-control(type='text' placeholder='Destino' name="destino"  )
+            .col-md-3
+                input.form-control(type='text' placeholder='Terminal' name="terminal"  )
+            .col-md-3
+                input.form-control(type='text' placeholder='Vendedor' name="vendedor"  )
+        .row.mt-5
+            .col-md-3
+                input.form-control(type='text' placeholder='Valor por pasajeros' name="precio"  )
+            .col-md-3
+                select#select(name="select", class="form-control"  ) 
+                        option.disabled.selected Estado del Pago
+                            option(value="Pagado") Pagado
+                            option(value="No pagado") No Pagado
+                            option(value="No pagado") Seña
+            .col-md-3
+                input.form-control(type='text' placeholder='Fecha de pago y Número de operacion'  name="observacion" )
+        .row.mt-5
+            .form-group.col-md-2
+                h1#back Pasajero 1
+                label(for='inputEmail4') Nombre
+                input#inputEmail4.form-control(type='text' placeholder='Nombre' name="nombre1"  )
+                label(for='inputEmail4') Apellido
+                input#inputEmail4.form-control(type='text' placeholder='Apellido' name="apellido1"  )
+                label(for='inputEmail4') DNI
+                input#inputEmail4.form-control(type='text' placeholder='DNI' name="dni1"  )
+                label(for='telefono') Teléfono
+                input#inputEmail4.form-control(type='text' placeholder='Telefono' name="telefono1"  )
+            .form-group.col-md-2
+                h1#back Pasajero 2
+                label(for='inputEmail4') Nombre
+                input#inputEmail4.form-control(type='text' placeholder='Nombre' name="nombre2")
+                label(for='inputEmail4') Apellido
+                input#inputEmail4.form-control(type='text' placeholder='Apellido' name="apellido2")
+                label(for='inputEmail4') DNI
+                input#inputEmail4.form-control(type='text' placeholder='DNI' name="dni2")
+                label(for='telefono') Teléfono
+                input#inputEmail4.form-control(type='text' placeholder='Telefono' name="telefono2")
+            .form-group.col-md-2
+                h1#back Pasajero 3
+                label(for='inputEmail4') Nombre
+                input#inputEmail4.form-control(type='text' placeholder='Nombre' name="nombre3")
+                label(for='inputEmail4') Apellido
+                input#inputEmail4.form-control(type='text' placeholder='Apellido' name="apellido3")
+                label(for='inputEmail4') DNI
+                input#inputEmail4.form-control(type='text' placeholder='DNI' name="dni3")
+                label(for='telefono') Teléfono
+                input#inputEmail4.form-control(type='text' placeholder='Telefono' name="telefono3")
+            .form-group.col-md-2
+                h1#back Pasajero 4
+                label(for='inputEmail4') Nombre
+                input#inputEmail4.form-control(type='text' placeholder='Nombre' name="nombre4")
+                label(for='inputEmail4') Apellido
+                input#inputEmail4.form-control(type='text' placeholder='Apellido' name="apellido4")
+                label(for='inputEmail4') DNI
+                input#inputEmail4.form-control(type='text' placeholder='DNI' name="dni4")
+                label(for='telefono') Teléfono
+                input#inputEmail4.form-control(type='text' placeholder='Telefono' name="telefono4")
+            .form-group.col-md-2
+                h1#back Pasajero 5
+                label(for='inputEmail4') Nombre
+                input#inputEmail4.form-control(type='text' placeholder='Nombre' name="nombre5")
+                label(for='inputEmail4') Apellido
+                input#inputEmail4.form-control(type='text' placeholder='Apellido' name="apellido5")
+                label(for='inputEmail4') DNI
+                input#inputEmail4.form-control(type='text' placeholder='DNI' name="dni5")
+                label(for='telefono') Teléfono
+                input#inputEmail4.form-control(type='text' placeholder='Telefono' name="telefono5")
+
+        input.btn.btn-success.btn-block.mt-5(type="submit")
+
+
+

@@ -1,0 +1,8 @@
+extends ./layout/index
+block contenido
+    main.container.mt-5
+        .row
+                .col-md-8
+                        h1 codigo de reserva [#{reservas.cupon}]
+                                h3= reservas.total
+                                script(src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js' data-preference-id=global.id)
