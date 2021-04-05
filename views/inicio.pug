@@ -1,20 +1,27 @@
 extends ./layout/index
 block slider
     .slider.pl-3
-        .row 
+        .row.m-0.p-0 
             .col-md-12-col-12.text-center
                 p Las mejores promos y los mejores hoteles
                 a(href="/viajes", class="myButton") PROMOS
 
 block contenido
     main.container.mt-5
-        h2.text-center.mb-5 Sobre Nosotros
+        h2.text-center.mb-5.sobreNosotros Sobre Nosotros
         .row.mb-5
-            .col-md-6
-                p It a r readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                p It a reontent of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            .col-md-6
-                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+            .col-md-3
+                img(src="img/iconoBus.svg", alt="icono seguridad", class="iconosInicio")
+            .col-md-3
+                img(src="img/iconoHotel.svg", alt="icono seguridad", class="iconosInicio")
+            .col-md-3
+                img(src="img/iconoPrecio.svg", alt="icono seguridad", class="iconosInicio")
+            .col-md-3
+                img(src="img/iconoDestino.svg", alt="icono seguridad", class="iconosInicio")
+
+            
+               
+        h2.text-center.mb-5.sobreNosotros Nuestros viajes
         include ./layout/bloque_viajes
 
     .descuento.mt-5
