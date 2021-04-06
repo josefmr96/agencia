@@ -1,15 +1,16 @@
 extends ./layout/index
 block contenido
-    main.container.mt-5
-            .row.proximos-viajes
+    main.container.arreglar
+            h3.sobreNosotros Promos exclusivas
+            .row.proximos-viajes.mt-5
+                
                     .grid
-                        each promocion in promociones
-                            .grid-item
-                                .card
-                                img.card-img(src=`img/destinos_${promocion.imagen}.jpg` alt='Rome')
-                                .card-content
-                                    h1.card-header #{promocion.titulo}
-                                    p.card-text 
-                                    a(href=`/viajes/${promocion.idpromocion}`, class="btn btn-success btn-block") Mas Información
-                                    | Info
-                                    span &rarr;
+                            each promocion in promociones
+                                .grid-item
+                                    .card
+                                    img.card-img(src=`img/destinos_${promocion.imagen}.jpg` alt='Rome')
+                                    .card-content
+                                        h1.card-header #{promocion.titulo}
+                                        p.card-text 
+                                        a(href=`/viajes/${promocion.idpromocion}`, class="myButton") Mas Información &rarr;    
+                                        
