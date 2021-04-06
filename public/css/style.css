@@ -499,6 +499,8 @@ html {
   padding: 3em;
 }
 .iconosInicio{
+  height: 100px;
+  width: 100%;
   
 }
 .sobreNosotros{
@@ -647,7 +649,23 @@ html {
     background-position-x: 20%
  
   }
-
+  .textoImg{
+    right: -5px;
+    bottom: -140px;
+    padding: 15px;
+  }
+  .botonImg{
+    right: -1px;
+    bottom: -201px;
+  }
+  .botonFullDay{
+    right: -1px;
+    bottom: -201px;
+  }
+  .botonInvierno{
+    right: -1px;
+    bottom: -201px;
+  }
   .logoInicio{
     margin-left: 0px;
     font-size: 15px;
