@@ -3,9 +3,9 @@ extends ./layout/index
 block contenido
     main.container.arreglar
         .row
-            .col-md-5.col-5
+            .col-md-5
                  img(src=`/img/destinos_${promocion.imagen}_ln.jpg`, alt="imagen viaje", class="imgDetalle")
-            .col-md-7.col-7
+            .col-md-7.col-12
                 h1.textoDetalle #{promocion.titulo}
                     p= promocion.descripcion
                 .gridDetalle

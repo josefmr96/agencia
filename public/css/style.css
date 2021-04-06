@@ -698,6 +698,12 @@ html {
 }
 
 @media only screen and (max-width: 60em) {
+  .imgDetalle{
+    display: none;
+  }
+  .gridDetalle {
+    width: auto;
+}
   /* body {
     padding: 3rem;
   } */
