@@ -725,6 +725,42 @@ html {
   text-align: right;
   color: orange;
 }
+.nombre{
+  font-family: "Prompt", Sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  height: 30px;
+
+}
+.myButton1{
+  background-color:#ffab07;
+  color:#ffffff;
+  font-size: 20px;
+  padding:15px;
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  border-color: #ffab07;
+
+}
+.myButton1:hover {
+  background-color: black;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  border-color: #ffab07;
+}
+
+.nombre1{
+  font-family: "Prompt", Sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  height: 30px;
+
+}
 
 .card-btn span {
   margin-left: 1rem;
@@ -739,6 +775,10 @@ html {
 .card-btn:hover span,
 .card-btn:active span {
   margin-left: 1.5rem;
+}
+.card{
+
+  border: 0px;
 }
 
 @media only screen and (max-width: 60em) {

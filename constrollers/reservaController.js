@@ -109,8 +109,8 @@ const guardarReservas = async (req,res)=>{
         try {
         
           const client = new SMTPClient({
-            user:'crystal60@ethereal.email',
-            password:'xFb5Q5K5M1mY4vNAF1',
+            user:'alene.kreiger@ethereal.email',
+            password:'GCFY8jh1Rdwgq77AzF',
             host: 'smtp.ethereal.email',
             tls: true,
             port:587
@@ -120,9 +120,9 @@ const guardarReservas = async (req,res)=>{
         client.send(
             {
                 text: 'i hope this works',
-                from: '<crystal60@ethereal.email>',
-                to: '<crystal60@ethereal.email>',
-                cc: 'crystal60@ethereal.email',
+                from: '<alene.kreiger@ethereal.email>',
+                to: '<alene.kreiger@ethereal.email>',
+                cc: 'alene.kreiger@ethereal.email',
                 subject: contentHTML,
             },
             (err, message) => {
