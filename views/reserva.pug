@@ -1,35 +1,41 @@
 extends ./layout/index
 block contenido
-    main.container.mt-5
-        h1.text-center.viajesH1 Datos de la reserva
-        .row
+    main.container.arreglar
+        h1.text-center.sobreNosotros Datos de la reserva
+        .row.mt-5
         form(action="/viajes/reserva/:slug" method="POST")
             .row
-                .col-md-6.col-lg-3.mb-6.card
-                    h1.viajesH1 Numero de Reserva:
-                    h2.viajesH1 Fecha de Salida:     
-                    h2.viajesH1 Precio: 
-                    h2.viajesH1 Cantidad de pasajeros:       
-                    h2.viajesH1 Total:     
-                    input(type="text", value=Date.now(), name="cupon", class="form-control",hidden)   
-                .col-md-6.col-lg-3.mb-6.card
-                        input#numeroReserva.mt-2(type="text", value=Date.now(), name="cupon", class="form-control", disabled)
-                        .card-body
-                            h2.viajesH1 #{promocion.titulo}
-                            h2.viajesH1 $#{promocion.precio} 
-                            h2#precio.pt-4
-                            .form-group
-                            label(for="select") 
-                            select#select(name="select", class="form-control") 
-                                option.disabled.selected Cantidad de Pasajeros
-                                each pasajero in pasajeros
-                                    option(value=pasajero.cantidad name=pasajero.cantidad) #{pasajero.cantidad}
-                            .form-group
-                            input#precioDB(type="text", name="precioDB", class="form-control", value=promocion.precio, hidden)
+                .col-md-8.col-lg-8.mb-6.card
+                    .gridDetalle
+                    .grid-itemDetalle
+                        .card
+                        .card-content
+                            h2.textoDetalle.text-center #{promocion.titulo} 
+                            h1.card-header Numero de Reserva: 
+                            h1.reservaCard #{Date.now()}
+                            input#numeroReserva.mt-2(type="text", value=Date.now(), name="cupon", class="form-control", hidden)
+                            h2.card-header Fecha de Salida:
+                            h1.reservaCard   #{promocion.fecha}   
+                            h2.card-header Precio:  
+                            h1.reservaCard   $#{promocion.precio}  
+                            h2.card-header Cantidad de pasajeros:       
+                            h2.card-header.mt-5 Total:
+                            input(type="text", value=Date.now(), name="cupon", class="form-control",hidden)   
                             
-                            .form-group
-                            input#salidaDB(type="text", name="salidaDB", class="form-control", value=promocion.fecha, hidden)
-                .col-md-6.col-lg-5.mb-4
+                            .card-body
+                                h2#precio.pt-4
+                                .form-group
+                                label(for="select") 
+                                select#select(name="select", class="form-control") 
+                                    option.disabled.selected Cantidad de Pasajeros
+                                    each pasajero in pasajeros
+                                        option(value=pasajero.cantidad name=pasajero.cantidad) #{pasajero.cantidad}
+                                .form-group
+                                input#precioDB(type="text", name="precioDB", class="form-control", value=promocion.precio, hidden)
+                                
+                                .form-group
+                                input#salidaDB(type="text", name="salidaDB", class="form-control", value=promocion.fecha, hidden)
+                .col-md-4.col-lg-4.mb-4
                         img#imgReserva(src=`/img/destinos_${promocion.imagen}_ln.jpg`,class="img-fluid" alt="imagen viaje")
                     
 

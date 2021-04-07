@@ -196,7 +196,16 @@ div.boton{
     margin-top: 10px;
 }
 #select{
-    font-size: 15px;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: right;
+  color: orange;
+  font-family: "Prompt", Sans-serif;
+  padding: 2px;
+  margin: -12px;
+  border: 1px  solid;
+  height: 45px;
 }
 
 
@@ -680,6 +689,41 @@ html {
   transition: 0.2s;
   cursor: pointer;
   letter-spacing: 0.1rem;
+}
+.reservaCard{
+  font-family: "Prompt", Sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: right;
+  color: orange;
+
+}
+.reservaForm{
+  position: relative;
+  float: right;
+  width: 50px;
+  bottom: 101px;
+  right: -11px;
+  font-family: "Prompt", Sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: right;
+  color: orange;
+}
+.reservaForm1{
+  position: relative;
+  float: right;
+  width: 105px;
+  bottom: 25px;
+  right: -63px;
+  font-family: "Prompt", Sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: right;
+  color: orange;
 }
 
 .card-btn span {

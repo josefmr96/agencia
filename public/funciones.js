@@ -20,9 +20,9 @@ selector.addEventListener('change',e=>{
     
         const total= Number(precioDB) *  e.target.value;
         console.log(total);
-        inputMulti.classList.add('form-control')
+        inputMulti.classList.add('form-control', 'reservaForm')
         inputMulti.setAttribute("name", "multiDB");
-        inputTotal.classList.add('form-control')
+        inputTotal.classList.add('form-control', 'reservaForm1')
         inputTotal.setAttribute("name", "totalDB");
         inputMulti.value=`${multiplicador}`;
         inputTotal.value=`$${total}`;
