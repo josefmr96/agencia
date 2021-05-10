@@ -90,10 +90,10 @@ const paginaViajes = async (req, res)=>{
    }
 const paginaTestimoniales = async (req, res)=>{
    try {
-       const testimoniales = await Testimonial.findAll();
+
     res.render('testimoniales', {
-        pagina: 'Testimoniales',
-        testimoniales
+        pagina: 'Testimoniales'
+
     });
    } catch (error) {
        console.log(error)

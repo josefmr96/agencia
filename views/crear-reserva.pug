@@ -1,0 +1,105 @@
+extends ./testimoniales
+block contenido
+
+    .container.arreglar 
+        .row
+            .col-md-12.col-12.text-center
+                h1.sidebarH1 DATOS DEL VIAJE
+        .row
+            .col-md-12.col-12
+                    form(action="/admin/adminlistaviajes/resevar/:idfullday" method="POST")
+                        .row
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Reserva" class="labelCrear") Numero de Reserva
+                                        input(type="text" class="form-control" name="cupon" value=Date.now()) 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Precio"  class="labelCrear") Precio
+                                        input(type="number" class="form-control" name="precio" value=fulldays.precio)
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="NombreDeEnlace"  class="labelCrear") Viaje seleccionado (#{fulldays.idfullday})
+                                        input(type="text" class="form-control" name="titulo" value=fulldays.titulo) 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="NombreDeEnlace"  class="labelCrear") Referencia Del Viaje
+                                        input(type="text" class="form-control" name="idfullday" value=fulldays.idfullday) 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Disponibles"  class="labelCrear") Disponibles
+                                        input(type="number" class="form-control" name="disponibles" value=fulldays.disponibles)  
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for=" CantidadDePasajeros"  class="labelCrear") Cantidad de pasajeros
+                                        input(type="number" class="form-control" name="cantidad") 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Total"  class="labelCrear") Total
+                                        input(type="number" class="form-control" name="total")  
+                            .col-md-3-col-3.p-3
+                                .form-group 
+                                    label(for="Seguro"  class="labelCrear") Seguro
+                                        input(type="number" class="form-control" name="seguro")
+                        .row
+                            .col-md-12.col-12.text-center
+                                h1.sidebarH1 DATOS DE LOS PASAJEROS                 
+                        .row 
+                            .col-md-3.col-lg-3.col-5 
+                                .form-group
+                                    label(for="nombre" class="nombre labelCrear" ) Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre1", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido1", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni1", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac1", class="form-control")
+                                    select#selectRe(name="recogidaDB1", class="form-control") 
+                                        option.disabled.selected Terminal
+                                        each terminal in terminales
+                                            option(value=terminal.terminal name=recogidaDB1) #{terminal.terminal}
+                            .col-md-3.col-lg-3.col-5
+                                .form-group
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre2", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido2", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni2", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac2", class="form-control")
+                            .col-md-3.col-lg-3.col-5
+                                .form-group
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre3", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido3", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni3", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac3", class="form-control")
+
+                            .col-md-3.col-lg-3.col-5
+                                .form-group
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre4", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido4", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni4", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac4", class="form-control")
+                            .col-md-3.col-lg-3.col-5
+                                .form-group
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre5", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido5", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni5", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac5", class="form-control")
+
+                        input.btn.btn-success.btn-block(type="submit" class="myButton") 
+                        

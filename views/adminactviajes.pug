@@ -1,0 +1,44 @@
+extends ./testimoniales
+block contenido
+
+    .container.arreglar
+                .row 
+                    .col-md-12.col-12.text-center
+                            h1.sidebarH1 ACTUALIZAR VIAJE
+
+                form(action=`/admin/adminlistaviajes/${fulldays.idfullday}` method="POST")
+                    .row
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="titulo" class="labelCrear") Titulo
+                                    input(type="text" class="form-control" name="titulo" value= fulldays.titulo ) 
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Precio" class="labelCrear") Precio
+                                    input(type="number" class="form-control" name="precio" value=fulldays.precio).col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Precio" class="labelCrear" hidden) idfulllday
+                                    input(type="number" class="form-control" name="idfulllday1" value=fulldays.idfullday)
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Fecha" class="labelCrear") Fecha
+                                    input(type="text" class="form-control" name="fecha" value=fulldays.fecha) 
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Descripcion" class="labelCrear") Descripcion
+                                    input(type="text" class="form-control" name="descripcion" value=fulldays.descripcion)  
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Imagen" class="labelCrear") Imagen
+                                    input(type="text" class="form-control" name="imagen"  value=fulldays.imagen)          
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="Disponibles" class="labelCrear") Disponibles
+                                    input(type="number" class="form-control" name="disponibles" value=fulldays.disponibles)          
+                        .col-md-3-col-3.p-3
+                            .form-group
+                                label(for="NombreDeEnlace" class="labelCrear") Nombre de enlace
+                                    input(type="text" class="form-control" name="slug" value=fulldays.slug) 
+
+                    input.btn.btn-success.btn-block.my-5(type="submit" class="myButton") 
+                    

@@ -1,0 +1,20 @@
+extends ./testimoniales
+block contenido
+ .container
+        .row 
+            .col-md-12.col-12.text-center
+                    h1.sidebarH1 LISTADO DE RESERVAS
+        .row.proximos-viajes.mt-5
+                        .grid
+                                each reserva in reservas
+                                    .grid-item
+                                        img.card-img1(src=`/img/logo_feo.png`, alt='Rome')
+                                        .card-content
+                                            h1.detalleP #{fulldays.titulo}
+                                            h1.detalleP Cupon # #{reserva.cupon}
+                                            p.detalleP Fecha de Salida - #{fulldays.fecha}
+                                            p.detalleP Cantidad de pasajeros - #{reserva.cantidad}
+                                            p.detalleP Total a Pagar - $#{reserva.total}
+                                            p.detalleP Presentarse 15minutos antes a la terminal, con la aplicacion cuidar Verano - #{fulldays.descripcion}
+                                            p.detalleP= `Voucher sujero a pago, unico he instrasferible para los siguientes pasajeros. ${reserva.pasajeros}.${reserva.pasajeros3}`
+                                            

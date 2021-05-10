@@ -2,10 +2,33 @@ cargarEventListeners();
 let documentos;
 function cargarEventListeners(){
 const selector = document.querySelector('#select');
-document.addEventListener('DOMContentLoaded', ()=>{
+const sidebar = document.getElementById("mySidenav")
+const closeNav = document.getElementById("closeNav")
+const openNav = document.getElementById("openNav")
 
- 
+document.addEventListener('DOMContentLoaded', ()=>{
+    openNav.addEventListener('click',e=>{
+        e.target.prevenDefault
+    
+            sidebar.style.width = "250px";
+     
+    
+    
+    })
+    closeNav.addEventListener('click',e=>{
+        e.target.prevenDefault
+    
+            sidebar.style.width = "0px";
+      
+    
+    
+    })
+
 })
+
+
+
+
 selector.addEventListener('change',e=>{
 
     console.log(e)

@@ -1,32 +1,63 @@
-extends ./layout/index
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{nombreSitio} | #{pagina}
+        link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap' rel='stylesheet')
+        link(rel="stylesheet" href="/css/bootstrap.css")
+        link(rel="stylesheet" href="/css/stylee.css")
+  
 
-block contenido
-    main.container.mt-5
-        h1.text-center.mt-5 #{pagina}
+        div#mySidenav(class="sidenav")
+            h1.sidebarH1 GNVIAJES
+            a#closeNav( class="closebtn" onclick="closeNav()") &times;
+            h3.sidebarH1 ACCESO-ADMIN
+                svg.icon.icon-tabler.icon-tabler-shield-lock(xmlns='http://www.w3.org/2000/svg' width='34' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                    path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                    path(d='M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3')
+                    circle(cx='12' cy='11' r='1')
+                    line(x1='12' y1='12' x2='12' y2='14.5')
+                a(href="/admin/adminviajes") Inicio
+                a(href="/admin/admin/lista-viajes") Listado
+            h3.sidebarH1 VIAJES
+                svg.icon.icon-tabler.icon-tabler-map(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                    path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                    polyline(points='3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7')
+                    line(x1='9' y1='4' x2='9' y2='17')
+                    line(x1='15' y1='7' x2='15' y2='20')
+                
+                a(href="/admin/adminlistaviajes") Reservar
+            h4.text-center Ir a la web
+                        a(href="/" class="volver")
+                            svg.icon.icon-tabler.icon-tabler-arrow-up-circle( xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                circle(cx='12' cy='12' r='9')
+                                line(x1='12' y1='8' x2='8' y2='12')
+                                line(x1='12' y1='8' x2='12' y2='16')
+                                line(x1='16' y1='12' x2='12' y2='8')
 
-        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
-        include ./layout/bloque_testimoniales
-        .row
+                            
 
-            .col-md-12
-                h2.d-block.w-100.text-center Agrega un Testimonial
-
-                if(errores)
-                    each error in errores
-                        .alert.col.alert-danger.text-center= error.mensaje
+      
+        span#openNav(onclick="openNav()")
+            svg.icon.icon-tabler.icon-tabler-menu(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                line(x1='4' y1='8' x2='20' y2='8')
+                line(x1='4' y1='16' x2='20' y2='16')
 
 
-            .row.justify-content-center.col
-                .col-md-8
-                    form(action="/testimoniales" method="POST")
-                        .form-group
-                            label(for="nombre") Nombre
-                            input#nombre(type="text",value="nombre", placeholder="Tu Nombre", name="nombre", class="form-control")
-                            .form-group
-                            label(for="correo") Correo 
-                            input#correo(type="text",value="correo", placeholder="Tu Correo", name="correo", class="form-control")
-                            .form-group
-                            label(for="mensaje") Mensaje
-                            textarea#mensaje(name="mensaje", placeholder="Tu Mensaje", rows="3", class="form-control")= mensaje  
-
-                        input.btn.btn-success.btn-block(type="submit")       
+            script
+                include ../public/funciones.js
+        block contenido
+.footer.container.pt-5
+    .row
+        .col-md-6-col-6.text-center
+            span.spanf= `Todos los Derechos Reservados ${actualYear} `
+                a(href="/") 
+                    svg.icon.icon-tabler.icon-tabler-copyright(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        circle(cx='12' cy='12' r='9')
+                        path(d='M14.5 9a3.5 4 0 1 0 0 6')           

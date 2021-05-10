@@ -1,0 +1,42 @@
+extends ./testimoniales
+block contenido
+
+    .container.arreglar 
+        .row
+            .col-md-12.col-12.text-center
+                h1.sidebarH1 CREAR VIAJE
+        .row
+            .col-md-12.col-12
+                    form(action="/admin/adminviajes" method="POST")
+                        .row
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="titulo" class="labelCrear") Titulo
+                                        input(type="text" class="form-control" name="titulo" ) 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Precio" class="labelCrear") Precio
+                                        input(type="number" class="form-control" name="precio")
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Fecha" class="labelCrear")  Fecha
+                                        input(type="text" class="form-control" name="fecha") 
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Descripcion" class="labelCrear") Descripcion
+                                        input(type="text" class="form-control" name="descripcion")  
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Imagen" class="labelCrear") Imagen
+                                        input(type="text" class="form-control" name="imagen")          
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="Disponibles" class="labelCrear") Disponibles
+                                        input(type="number" class="form-control" name="disponibles")          
+                            .col-md-3-col-3.p-3
+                                .form-group
+                                    label(for="NombreDeEnlace" class="labelCrear") Nombre de enlace
+                                        input(type="text" class="form-control" name="slug") 
+
+                        input.btn.btn-success.btn-block.my-5.my-5(type="submit" class="myButton") 
+                        

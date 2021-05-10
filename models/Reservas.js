@@ -15,6 +15,9 @@ export const Reserva = db.define('reservas',{
     fk_idpago: {
         type: Sequelize.INTEGER
     },
+    fk_idfullday: {
+        type: Sequelize.INTEGER
+    },
     cantidad: {
         type: Sequelize.TEXT
     },
@@ -33,7 +36,13 @@ export const Reserva = db.define('reservas',{
     pasajeros: {
         type: Sequelize.TEXT
     },
+    pasajeros3: {
+        type: Sequelize.TEXT
+    },
     terminal: {
+        type: Sequelize.TEXT
+    },  
+    viajes: {
         type: Sequelize.TEXT
     },
 });

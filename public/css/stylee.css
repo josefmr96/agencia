@@ -1,0 +1,232 @@
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .proximos-viajes p {
+    font-size: .9rem;
+    
+} 
+.col{
+  flex: 0%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.proximos-viajes p{
+  font-weight: 400;
+  z-index: 100;
+  color: black;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-bottom: 3px solid;
+  border-color: #ffab07;
+
+}
+.myButton {
+  background-color: #212529;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 4px;
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  margin: 4px;
+  font-weight: 900;
+
+
+}
+body{
+  background-color: #010203;
+}
+.myButton:hover {
+	background-color:white;
+  color: #ffab07;
+  border-color: #212529;
+}
+.card-header {
+  font-family: "Prompt", Sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* The navigation menu links */
+  .sidenav a {
+    padding: 5px 0px 8px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+.copyright{
+  color:red
+}
+.crearViaje{
+  background-color: #212529;
+  text-transform: uppercase;
+  font-family: "Prompt", Sans-serif;
+  font-weight: 900;
+  font-size: large;
+}
+.crearViaje:hover{
+  color: #ffa500;
+  border-color: #fff;
+  background-color: #fff;
+
+}
+.spanf{
+  font-size: 10px;
+}
+  .form-control{
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 1.375rem 1.75rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #646401;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .form-control:hover{
+    color: orange
+  }
+  .icon-tabler-arrow-up-circle{
+    margin: -17px;
+    margin-left: 4px;
+  }
+  .icon-tabler-map{
+    padding: 5px;
+  }
+  .sidenav h4{
+    padding: 66px 0px 0px 17px;
+    text-decoration: overline;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    text-decoration-color: orange;
+    text-decoration-line: overline;
+    display: inline-block;
+  }
+  #selectRe{
+    height: 55px;
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .btn-success {
+    color: #fff;
+    border-color: #ffa500;
+}
+.icon-tabler-menu{
+  color: beige;
+}.icon-tabler-menu:hover{
+  padding: 5px;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidebarH1{
+    color: orange;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid;
+    border-color: #ffab07;
+  }
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .closebtn{
+    color: white;
+  }
+  a:not([href]):not([tabindex]) {
+    color: white;
+    text-decoration: none;
+}    a:not([href]):not([tabindex]):hover {
+    color: orange;
+    font-size: 50px;
+}  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  .grid {
+    display: grid;
+    width: 114em;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: start;
+
+  }
+  .card-img1{
+    display: block;
+    width: 34%;
+    height: 8rem;
+    object-fit: inherit;
+  }
+  
+  .grid-item {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .grid-item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1rem 1rem 0px rgb(255 123 13);
+  }
+  .labelCrear{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  } .labelCrear:hover{
+    color: #f1f1f1;
+  }
+  
+  .card-img {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 3em;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
