@@ -22,7 +22,7 @@ body {
 }
 .navbar-brand1{
   padding: 15px;
-  color: black;
+  color: white;
   font-size: 15px;
   text-transform: uppercase;
   padding: 0px;
@@ -114,7 +114,16 @@ ul{
     text-align: center;
     user-select: none;
   }
-  
+  #footerPg{
+    background-color: #111;
+  }
+.spanf{
+  color: white;
+}
+.nav-link.spanf{
+  color: white;
+}
+ 
   /* Estilo del boton cuando se pasa el mouse por encima*/
 
   

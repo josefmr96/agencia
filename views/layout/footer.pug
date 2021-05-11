@@ -1,11 +1,40 @@
-footer.container.py-5
+footer.container-fluid.mt-5.py-5#footerPg
     .row
-        .col-md-6
+        .col-md-3.col-6
             nav.nav.footer.justify-content-center.justify-content-md-start
-                a.nav-link(href="/nosotros") Nosotros
-                a.nav-link(href="/viajes") Viajes
-                a.nav-link(href="/testimoniales") Testimoniales
-        .col
+                a.nav-link.spanf(href="/") Inicio
+                a.nav-link.spanf(href="#nosotros") Nosotros
+                a.nav-link.spanf(href="#viajes") Viajes
+                a.nav-link.spanf(href="#viajes") Promos especiales
+                a.nav-link.spanf(href="https://wa.link/8khcdt", target="_blank") Trabaja Con Nosotros
+        .col-md-6.col-6.text-center
+            h2.footerx Contactanos!
+            .row.text-center
+                    .col-md-4
+                        a(href="https://wa.link/z9yp35",target="_blank") 
+                            svg.icon.icon-tabler.icon-tabler-brand-whatsapp(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                path(d='M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9')
+                                path(d='M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1')
+                    .col-md-4
+                        a(href="https://www.instagram.com/gnviajestravel/?hl=es",target="_blank") 
+                            svg.icon.icon-tabler.icon-tabler-brand-instagram(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                rect(x='4' y='4' width='16' height='16' rx='4')
+                                circle(cx='12' cy='12' r='3')
+                                line(x1='16.5' y1='7.5' x2='16.5' y2='7.501')
+                    .col-md-4
+                        a(href="https://www.facebook.com/Vacaciones-Argentina-todo-el-A%C3%B1o-106470260888182/",target="_blank") 
+                            svg.icon.icon-tabler.icon-tabler-brand-facebook(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                                path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                path(d='M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3')
+
+
+        
+        .col-md-3.col-6
             p.copyright.text-center.text-md-right
-                | Todos los Derechos Reservados
-                span= actualYear
+                span.spanf= `Todos los Derechos Reservados ${actualYear} `
+                svg.icon.icon-tabler.icon-tabler-copyright(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                    path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                    circle(cx='12' cy='12' r='9')
+                    path(d='M14.5 9a3.5 4 0 1 0 0 6')           
