@@ -30,9 +30,9 @@ const router = express.Router();
 router.get('/', paginaInicio );
 router.get('/nosotros',paginaNosotros);
 router.get('/viajes', paginaViajes);
-router.get('/viajes/:idpromocion', paginaDetallePromocion);
+router.get('/viajes/:idfullday', paginaDetallePromocion);
 
-router.get('/viajes/reserva/:slug', paginaReservas);
+router.get('/viajes/reserva/:idfullday', paginaReservas);
 router.post('/viajes/reserva/:slug', guardarReservas);
 
 router.get('/productos', paginaProductos);

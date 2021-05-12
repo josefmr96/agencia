@@ -621,7 +621,8 @@ html {
   border-bottom: 1px solid;
 }
 .imgDetalle{
-  height: 500px;
+  height: 94%;
+  width: 100%;
 }
 .gridDetalle{
   width:50em;

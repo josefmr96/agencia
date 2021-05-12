@@ -5,12 +5,12 @@ block contenido
             .row.proximos-viajes.mt-5
                 
                     .grid
-                            each promocion in promociones
+                            each fullday in fulldays
                                 .grid-item
                                     .card
-                                    img.card-img(src=`img/destinos_${promocion.imagen}.jpg` alt='Rome')
+                                    img.card-img(src=`img/destinos_${fullday.imagen}.jpg` alt='Rome')
                                     .card-content
-                                        h1.card-header #{promocion.titulo}
+                                        h1.card-header #{fullday.titulo}
                                         p.card-text 
-                                        a(href=`/viajes/${promocion.idpromocion}`, class="myButton") Mas Información &rarr;    
+                                        a(href=`/viajes/${fullday.idfullday}`, class="myButton") Mas Información &rarr;    
                                         

@@ -19,12 +19,12 @@ const paginaInicio = async (req, res)=>{
 }
 const paginaPromociones = async (req, res)=>{
     //consultar 3 viajes del modelo viaje
-    const promociones = await Promocion.findAll();
+    const fulldays = await Fulldays.findAll();
     try {
 
         res.render('promociones', {
             pagina: 'Promociones',
-            promociones
+            fulldays
         });
     } catch (error) {
         console.log(error)
@@ -103,16 +103,16 @@ const paginaTestimoniales = async (req, res)=>{
    //muestra un viajre por su slug 
 
 const paginaDetallePromocion = async (req, res)=>{
-    const{idpromocion} =req.params;
+    const{idfullday} =req.params;
 
     try {
 
-        const promocion = await Promocion.findOne({where : {idpromocion}})
-        console.log(promocion)
+        const fulldays = await Fulldays.findOne({where : {idfullday}})
+        console.log(fulldays)
     
         res.render('viaje',{
             pagina: 'Informacion Viaje',
-            promocion
+            fulldays
         })
         
     } catch (error) {
@@ -121,17 +121,17 @@ const paginaDetallePromocion = async (req, res)=>{
     }
 }
 const paginaReservas = async (req, res)=>{
-    const{slug} =req.params;
+    const{idfullday} =req.params;
     
     
     try {
         const pasajeros = await Pasajero.findAll();
         const terminales = await Terminal.findAll();
-        const promocion = await Promocion.findOne(
-            {where : {slug:slug}/* , include: [{model: Salidas, required: true}] */});
+        const fulldays = await Fulldays.findOne(
+            {where : {idfullday:idfullday}/* , include: [{model: Salidas, required: true}] */});
         res.render('reserva',{
             pagina: 'Informacion Viaje',
-            promocion,
+            fulldays,
             pasajeros,
             terminales
         });

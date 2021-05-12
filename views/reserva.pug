@@ -3,20 +3,20 @@ block contenido
     main.container.arreglar
         h1.text-center.sobreNosotros Datos de la reserva
         .row.mt-5
-        form(action="/viajes/reserva/:slug" method="POST")
+        form(action="/viajes/reserva/:idfullday" method="POST")
             .row.p-0.m-0
                 .col-md-8.col-lg-8.mb-6.card
                     .gridDetalle
                     .grid-itemDetalle
                         .card
                         .card-content
-                            h2.textoDetalle.text-center #{promocion.titulo} 
+                            h2.textoDetalle.text-center #{fulldays.titulo} 
                             h1.card-header Numero de Reserva: 
                             h1.reservaCard #{Date.now()}
                             h2.card-header Fecha de Salida:
-                            h1.reservaCard   #{promocion.fecha}   
+                            h1.reservaCard   #{fulldays.fecha}   
                             h2.card-header Precio:  
-                            h1.reservaCard   $#{promocion.precio}  
+                            h1.reservaCard   $#{fulldays.precio}  
                             h2.card-header Cantidad de pasajeros:       
                             h2.card-header.mt-5 Total:
                             input(type="text", value=Date.now(), name="cupon", class="form-control",hidden)   
@@ -30,12 +30,12 @@ block contenido
                                     each pasajero in pasajeros
                                         option(value=pasajero.cantidad name=pasajero.cantidad) #{pasajero.cantidad}
                                 .form-group
-                                input#precioDB(type="text", name="precioDB", class="form-control", value=promocion.precio, hidden)
+                                input#precioDB(type="text", name="precioDB", class="form-control", value=fulldays.precio, hidden)
                                 
                                 .form-group
-                                input#salidaDB(type="text", name="salidaDB", class="form-control", value=promocion.fecha, hidden)
+                                input#salidaDB(type="text", name="salidaDB", class="form-control", value=fulldays.fecha, hidden)
                 .col-md-4.col-lg-4.mb-4
-                        img#imgReserva(src=`/img/destinos_${promocion.imagen}_ln.jpg`,class="img-fluid" alt="imagen viaje")
+                        img#imgReserva(src=`/img/destinos_${fulldays.imagen}_ln.jpg`,class="img-fluid" alt="imagen viaje")
                     
 
                         script
@@ -45,123 +45,63 @@ block contenido
                         .col-md-3.col-lg-3.col-5
                             .div.formulario1.py-3.mx-3
                                 .form-group
-                                label(for="nombre" class="nombre") Nombre
-                                input#nombre(type="text",value="", placeholder="Nombre", name="nombre1", class="form-control nombre1")
-                                .form-group
-                                label(for="apellido" class="nombre") Apellido
-                                input#apellido(type="text",value="", placeholder="Apellido", name="apellido1", class="form-control nombre1")
-                                .form-group
-                                label(for="dni" class="nombre") DNI
-                                input#dni(type="text",value="", placeholder="DNI", name="dni1", class="form-control nombre1")
-                                .form-group
-                                label(for="correo" class="nombre") Correo
-                                input#correo(type="text",value="", placeholder="Correo", name="correo1", class="form-control nombre1")
-                                .form-group
-                                label(for="telefono" class="nombre") Telefono 
-                                input#telefono(type="text",value="", placeholder="Telefono", name="telefono1", class="form-control nombre1")
-                                .form-group
-                                label(for="fechaNac" class="nombre") F.Nac.
-                                input(type="date", value="", placeholder="", name="fechaNac1", class="form-control nombre1")
-                                select#selectRe(name="recogidaDB1", class="form-control nombre1") 
-                                    option.disabled.selected Terminal
-                                    each terminal in terminales
-                                        option(value=terminal.terminal name=recogidaDB1) #{terminal.terminal}
+                                    label(for="nombre" class="nombre labelCrear" ) Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre1", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido1", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni1", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac1", class="form-control")
+                                    select#selectRe(name="recogidaDB1", class="form-control") 
+                                        option.disabled.selected Terminal
+                                        each terminal in terminales
+                                            option(value=terminal.terminal name=recogidaDB1) #{terminal.terminal}
                         .col-md-3.col-lg-3.col-5
                             .div.formulario2.py-3.mx-3
                                 .form-group
-                                label(for="nombre"  class="nombre") Nombre
-                                input(type="text",value="", placeholder="Nombre", name="nombre2", class="form-control nombre1")
-                                .form-group
-                                label(for="apellido"  class="nombre") Apellido
-                                input(type="text",value="", placeholder="Apellido", name="apellido2", class="form-control nombre1")
-                                .form-group
-                                label(for="dni"  class="nombre") DNI
-                                input(type="text",value="", placeholder="DNI", name="dni2", class="form-control nombre1")
-                                .form-group
-                                label(for="correo"  class="nombre") Correo
-                                input(type="text",value="", placeholder="Correo", name="correo2", class="form-control nombre1")
-                                .form-group
-                                label(for="telefono"  class="nombre") Telefono 
-                                input(type="text",value="", placeholder="Telefono", name="telefono2", class="form-control nombre1")
-                                .form-group
-                                label(for="fechaNac"  class="nombre") F.Nac.
-                                input(type="date", value="", placeholder="", name="fechaNac2", class="form-control nombre1" ) 
-                                select#selectRe(name="recogidaDB2", class="form-control nombre1") 
-                                    option.disabled.selected Terminal
-                                    each terminal in terminales
-                                        option(value=terminal.terminal name=recogidaDB2) #{terminal.terminal}      
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre2", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido2", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni2", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac2", class="form-control")     
                         .col-md-2.col-lg-2.col-5
-                            .form-group
                             .div.formulario3.py-3.mx-3
-                                label(for="nombre"  class="nombre") Nombre
-                                input(type="text",value="", placeholder="Nombre", name="nombre3", class="form-control nombre1")
                                 .form-group
-                                label(for="apellido"  class="nombre") Apellido
-                                input(type="text",value="", placeholder="Apellido", name="apellido3", class="form-control nombre1")
-                                .form-group
-                                label(for="dni"  class="nombre") DNI
-                                input(type="text",value="", placeholder="DNI", name="dni3", class="form-control nombre1")
-                                .form-group
-                                label(for="correo"  class="nombre") Correo
-                                input(type="text",value="", placeholder="Correo", name="correo3", class="form-control nombre1")
-                                .form-group
-                                label(for="telefono"  class="nombre") Telefono 
-                                input(type="text",value="", placeholder="Telefono", name="telefono3", class="form-control nombre1")
-                                .form-group
-                                label(for="fechaNac"  class="nombre") F.Nac.
-                                input(type="date", value="", placeholder="", name="fechaNac3", class="form-control nombre1")
-                                select#selectRe(name="recogidaDB3", class="form-control nombre1") 
-                                    option.disabled.selected Terminal
-                                    each terminal in terminales
-                                        option(value=terminal.terminal name=recogidaDB3) #{terminal.terminal}
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre3", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido3", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni3", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac3", class="form-control")
                         .col-md-2.col-lg-2.col-5
-                            .form-group
                             .div.formulario4.py-3.mx-3
-                                label(for="nombre"  class="nombre") Nombre
-                                input(type="text",value="", placeholder="Nombre", name="nombre4", class="form-control nombre1")
                                 .form-group
-                                label(for="apellido"  class="nombre") Apellido
-                                input(type="text",value="", placeholder="Apellido", name="apellido4", class="form-control nombre1")
-                                .form-group
-                                label(for="dni"  class="nombre") DNI
-                                input(type="text",value="", placeholder="DNI", name="dni4", class="form-control nombre1")
-                                .form-group
-                                label(for="correo"  class="nombre") Correo
-                                input(type="text",value="", placeholder="Correo", name="correo4", class="form-control nombre1")
-                                .form-group
-                                label(for="telefono"  class="nombre") Telefono 
-                                input(type="text",value="", placeholder="Telefono", name="telefono4", class="form-control nombre1")
-                                .form-group
-                                label(for="fechaNac"  class="nombre") F.Nac.
-                                input(type="date", value="", placeholder="", name="fechaNac4", class="form-control nombre1")
-                                select#selectRe(name="recogidaDB4", class="form-control nombre1") 
-                                    option.disabled.selected Terminal
-                                    each terminal in terminales
-                                        option(value=terminal.terminal name=recogidaDB4) #{terminal.terminal}
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre4", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido4", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni4", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac4", class="form-control")
                         .col-md-2.col-lg-2.col-5
-                            .form-group
+                           
                             .div.formulario5.py-3.mx-3
-                                label(for="nombre"  class="nombre") Nombre
-                                input(type="text",value="", placeholder="Nombre", name="nombre5", class="form-control nombre1")
                                 .form-group
-                                label(for="apellido"  class="nombre") Apellido
-                                input(type="text",value="", placeholder="Apellido", name="apellido5", class="form-control nombre1")
-                                .form-group
-                                label(for="dni" class="nombre") DNI
-                                input(type="text",value="", placeholder="DNI", name="dni5", class="form-control nombre1")
-                                .form-group
-                                label(for="correo" class="nombre") Correo
-                                input(type="text",value="", placeholder="Correo", name="correo5", class="form-control nombre1")
-                                .form-group
-                                label(for="telefono" class="nombre") Telefono 
-                                input(type="text",value="", placeholder="Telefono", name="telefono5", class="form-control nombre1")
-                                .form-group
-                                label(for="fechaNac" class="nombre") F.Nac.
-                                input(type="date", value="", placeholder="", name="fechaNac5", class="form-control nombre1")
-                                select#selectRe(name="recogidaDB5", class="form-control nombre1") 
-                                    option.disabled.selected Terminal
-                                    each terminal in terminales
-                                        option(value=terminal.terminal name=recogidaDB5) #{terminal.terminal}
+                                    label(for="nombre" class="nombre labelCrear") Nombre
+                                    input#nombre(type="text",value="", placeholder="Nombre", name="nombre5", class="form-control")
+                                    label(for="apellido" class="nombre labelCrear") Apellido
+                                    input#apellido(type="text",value="", placeholder="Apellido", name="apellido5", class="form-control")
+                                    label(for="dni" class="nombre labelCrear") DNI
+                                    input#dni(type="text",value="", placeholder="DNI", name="dni5", class="form-control")
+                                    label(for="fechaNac" class="nombre labelCrear") F.Nac.
+                                    input(type="date", value="", placeholder="", name="fechaNac5", class="form-control")
                 
             .div.boton.mt-5
                     input.btn.btn-success.btn-block(type="submit" class="myButton1") 
