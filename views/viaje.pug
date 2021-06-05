@@ -4,7 +4,7 @@ block contenido
     main.container.arreglar
         .row
             .col-md-5
-                 img(src=`/img/destinos_${fulldays.imagen}_ln.jpg`, alt="imagen viaje", class="imgDetalle")
+                 img(src=`${fulldays.imagen}`, alt="imagen viaje", class="imgDetalle")
             .col-md-7.col-12
                 h1.textoDetalle #{fulldays.titulo}
                     p= fulldays.descripcion

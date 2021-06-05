@@ -8,9 +8,9 @@ block contenido
                             each fullday in fulldays
                                 .grid-item
                                     .card
-                                    img.card-img(src=`img/destinos_${fullday.imagen}.jpg` alt='Rome')
+                                    img.card-img(src=`${fullday.imagen}` alt='Rome')
                                     .card-content
                                         h1.card-header #{fullday.titulo}
                                         p.card-text 
-                                        a(href=`/viajes/${fullday.idfullday}`, class="myButton") Mas Información &rarr;    
+                                        a(href=`/viajes/info/${fullday.idfullday}`, class="myButton") Mas Información &rarr;    
                                         

@@ -34,8 +34,11 @@ block contenido
                                 
                                 .form-group
                                 input#salidaDB(type="text", name="salidaDB", class="form-control", value=fulldays.fecha, hidden)
+                                .form-group
+                                input(type="number" class="form-control" name="idfullday" value=fulldays.idfullday, hidden) 
+                                input(type="number" class="form-control" name="disponibles" value=fulldays.disponibles, hidden)   
                 .col-md-4.col-lg-4.mb-4
-                        img#imgReserva(src=`/img/destinos_${fulldays.imagen}_ln.jpg`,class="img-fluid" alt="imagen viaje")
+                        img#imgReserva(src=`${fulldays.imagen}`,class="img-fluid" alt="imagen viaje")
                     
 
                         script

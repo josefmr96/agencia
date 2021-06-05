@@ -721,6 +721,7 @@ html {
   text-transform: uppercase;
   text-align: right;
   color: orange;
+  border: aliceblue;
 }
 .reservaForm1{
   position: relative;
@@ -734,6 +735,7 @@ html {
   text-transform: uppercase;
   text-align: right;
   color: orange;
+  border: aliceblue;
 }
 .nombre{
   font-family: "Prompt", Sans-serif;

@@ -10,7 +10,7 @@ block contenido
                         .grid
                                 each fullday in fulldays
                                     .grid-item
-                                        img.card-img(src=`/img/destinos_${fullday.imagen}.jpg`, alt='Rome')
+                                        img.card-img(src=`${fullday.imagen}`, alt='Rome')
                                         .card-content
                                             h1.card-header #{fullday.titulo}
                                             p.detalleP Fecha de Salida - #{fullday.fecha}

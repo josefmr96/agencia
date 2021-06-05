@@ -1,8 +1,18 @@
 extends ./layout/index
 block contenido
-    main.container.mt-5
+    main.container.arreglar
         .row
-                .col-md-8
-                        h1 codigo de reserva [#{reservas.cupon}]
-                                h3= reservas.total
-                                script(src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js' data-preference-id=global.id)
+            .col-md-12.col-12.text-center
+                h1.textoDetalle Reserva tomada con exito CUPÓN[#{reservas.cupon}]
+        .row
+            .col-md-6-col-6
+                    p.detalleP Para hacer efectiva tu reserva puedes pagar mediante MercadoPago ,Transferencia Bancaria Para pagos con tarjetas contactatanos por el whatsapp de reservas
+            .col-md-6-col-6
+                .grid-item
+                    .card
+                    .card-content
+                        h1.card-header Total #{reservas.total}
+                        p.card-text Cantidad de pasajeros #{reservas.cantidad}
+                        p.card-text  #{reservas.pasajeros}
+                        p.card-text  #{reservas.pasajeros3}                                 
+                            script(src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js' data-preference-id=global.id)
