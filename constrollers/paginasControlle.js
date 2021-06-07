@@ -18,17 +18,25 @@ const paginaInicio = async (req, res)=>{
    
 }
 const paginaPromociones = async (req, res)=>{
-    //consultar 3 viajes del modelo viaje
-    const fulldays = await Fulldays.findAll();
-    try {
+    const slug =req.query.slug
+    if(slug){
+        const fulldays = await Fulldays.findAll({where: {slug}})
 
+        
+        res.render('promociones', {
+            pagina: `${slug}`,
+            fulldays
+        });
+
+    }else{
+        const fulldays = await Fulldays.findAll();
         res.render('promociones', {
             pagina: 'Promociones',
             fulldays
         });
-    } catch (error) {
-        console.log(error)
     }
+
+
    
 }
 const paginaFulldays = async (req, res)=>{

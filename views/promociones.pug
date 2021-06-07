@@ -1,11 +1,12 @@
 extends ./layout/index
 block contenido
     main.container.arreglar
-            h3.sobreNosotros Promos exclusivas
+            h3.sobreNosotros Promos exclusivas | #{pagina}
             .row.proximos-viajes.mt-5
                 
                     .grid
                             each fullday in fulldays
+                            
                                 .grid-item
                                     .card
                                     img.card-img(src=`${fullday.imagen}` alt='Rome')
