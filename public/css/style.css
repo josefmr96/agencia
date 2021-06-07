@@ -536,16 +536,20 @@ html {
   position: relative;
   font-weight: 900;
   text-decoration: none;
-  font-size:20px;
+  font-size: 24px;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: 3px;
   transition: 0.50s;
   font-family: 'Montserrat', sans-serif;
   float: right;
-  right: -5px;
-  bottom: -79px;
+  right: 0px;
+  bottom: -6px;
   padding: 15px;
   z-index: 100;
+  border: 1px solid;
+  border-color: #ffab07;
+  color: #ffab07;
+  background-color: #223b56;
 }
 .botonImg {
   background-color: #ffab07;
@@ -558,7 +562,7 @@ html {
   transition: 0.50s;
   font-family: 'Montserrat', sans-serif;
   float: right;
-  right: 220px;
+  right: 307px;
   bottom: -146px;
   padding: 15px;
   z-index: 100;
@@ -575,7 +579,7 @@ html {
   transition: 0.50s;
   font-family: 'Montserrat', sans-serif;
   float: right;
-  right: 274px;
+  right: 381px;
   bottom: -146px;
   padding: 15px;
   z-index: 100;
@@ -592,11 +596,24 @@ html {
   transition: 0.50s;
   font-family: 'Montserrat', sans-serif;
   float: right;
-  right: 340px;
+  right: 472px;
   bottom: -146px;
   padding: 15px;
   z-index: 100;
   color: white;
+}
+.im{
+  color: #09015f;
+  font-weight: 900;
+}
+.card-header-ini{
+
+    font-family: "Prompt", Sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    color: #fec34f;
 }
 .botonImg:hover{
   background-color: #ffab07;
