@@ -257,6 +257,9 @@ div.boton{
     letter-spacing: 1px;
     transition: 1.50s;
     font-family: 'Montserrat', sans-serif;
+    background-color: #07243b;
+
+    border: 1px solid;
 
 }
 .slider em {
