@@ -7,7 +7,7 @@ const pagoReserva = async (req,res) =>{
   const {cupon} = req.params
   const reservas = await Reserva.findOne({where : {cupon}});
   mercadopago.configure({
-    access_token: 'TEST-4329415140267504-010202-03daebbfe8dd3f1493158939dc2adac2-344815873'
+    access_token: 'APP_USR-4329415140267504-010202-779b7778be9440049333305d702d3d0e-344815873'
 });
 
 var preference = {

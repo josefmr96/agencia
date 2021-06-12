@@ -4,15 +4,29 @@ block contenido
         .row
             .col-md-12.col-12.text-center
                 h1.textoDetalle Reserva tomada con exito CUPÓN[#{reservas.cupon}]
-        .row
-            .col-md-6-col-6
-                    p.detalleP Para hacer efectiva tu reserva puedes pagar mediante MercadoPago ,Transferencia Bancaria Para pagos con tarjetas contactatanos por el whatsapp de reservas
-            .col-md-6-col-6
+                p.detalleP Para hacer efectiva tu reserva puedes pagar mediante MercadoPago ,Transferencia Bancaria, con tarjetas.
+        .row.mb-5
+            .grid          
+                .grid-item
+                    .card-content
+                        h1.card-header Pagar con MercadoPago
+                        h3.card-text Cantidad de pasajeros #{reservas.cantidad}
+                        h3.card-text Total $#{reservas.total}
+                        h3.card-text  #{reservas.pasajeros}
+                        h3.card-text  #{reservas.pasajeros3}    
+                        h3.card-text  Una vez realizado el pago enviar el comprobante por el correo o el numero de reservas  WhatsApp +54 9 11 2874-1526                             
+                        script(src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js' data-preference-id=global.id)
                 .grid-item
                     .card
                     .card-content
-                        h1.card-header Total #{reservas.total}
-                        p.card-text Cantidad de pasajeros #{reservas.cantidad}
-                        p.card-text  #{reservas.pasajeros}
-                        p.card-text  #{reservas.pasajeros3}                                 
-                            script(src='https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js' data-preference-id=global.id)
+                        h1.card-header Pagar Por Transferencia
+                        h3.card-text BANCO GALICIA CBU: 00701941 30004003590413                          
+                        h3.card-text ALIAS: LICOR.RUBIA.LODO                        
+                        h3.card-text Total $#{reservas.total}   
+                        h3.card-text  Una vez realizado el pago enviar el comprobante por el correo o el numero de reservas  WhatsApp +54 9 11 2874-1526
+                        svg.icon.icon-tabler.icon-tabler-mail(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            rect(x='3' y='5' width='18' height='14' rx='2')
+                            polyline(points='3 7 12 13 21 7')
+                        | gnviajestravelhotel@gmail.com
+                        
