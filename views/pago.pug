@@ -11,7 +11,9 @@ block contenido
                     .card-content
                         h1.card-header Pagar con MercadoPago
                         h3.card-text Cantidad de pasajeros #{reservas.cantidad}
-                        h3.card-text Total $#{reservas.total}
+                        h3.card-text Precio $#{reservas.total}
+                        h3.card-text comision MP $#{comision}
+                        h3.card-text Total $#{total}
                         h3.card-text  #{reservas.pasajeros}
                         h3.card-text  #{reservas.pasajeros3}    
                         h3.card-text  Una vez realizado el pago enviar el comprobante por el correo o el numero de reservas  WhatsApp +54 9 11 2874-1526                             
@@ -21,7 +23,8 @@ block contenido
                     .card-content
                         h1.card-header Pagar Por Transferencia
                         h3.card-text BANCO GALICIA CBU: 00701941 30004003590413                          
-                        h3.card-text ALIAS: LICOR.RUBIA.LODO                        
+                        h3.card-text ALIAS: LICOR.RUBIA.LODO                                     
+                        h3.card-text PAGANDO POR TRANSFENCIAS TE AHORRAS UN 15% DE LA COMISION DE MERCADOPAGO                                   
                         h3.card-text Total $#{reservas.total}   
                         h3.card-text  Una vez realizado el pago enviar el comprobante por el correo o el numero de reservas  WhatsApp +54 9 11 2874-1526
                         svg.icon.icon-tabler.icon-tabler-mail(xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewbox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round')
