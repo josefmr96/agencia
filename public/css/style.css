@@ -599,7 +599,75 @@ html {
   transition: 0.50s;
   font-family: 'Montserrat', sans-serif;
   float: right;
-  right: 472px;
+  right: 468px;
+  bottom: -146px;
+  padding: 15px;
+  z-index: 100;
+  color: white;
+}
+.botonInvierno2 {
+  background-color: #ffab07;
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  transition: 0.50s;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  right: 178px;
+  bottom: -146px;
+  padding: 15px;
+  z-index: 100;
+  color: white;
+}
+.botonInvierno3 {
+  background-color: #ffab07;
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  transition: 0.50s;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  right: 217px;
+  bottom: -146px;
+  padding: 15px;
+  z-index: 100;
+  color: white;
+}
+.botonInvierno4 {
+  background-color: #ffab07;
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  transition: 0.50s;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  right: 205px;
+  bottom: -146px;
+  padding: 15px;
+  z-index: 100;
+  color: white;
+}
+.botonInvierno5 {
+  background-color: #ffab07;
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  transition: 0.50s;
+  font-family: 'Montserrat', sans-serif;
+  float: right;
+  right: 448px;
   bottom: -146px;
   padding: 15px;
   z-index: 100;
@@ -628,6 +696,23 @@ html {
   padding: 30px;
 }
 .botonInvierno:hover{
+  background-color: #ffab07;
+  color: white;
+  padding: 30px;
+}.botonInvierno5:hover{
+  background-color: #ffab07;
+  color: white;
+  padding: 30px;
+}.botonInvierno4:hover{
+  background-color: #ffab07;
+  color: white;
+  padding: 30px;
+}.botonInvierno3:hover{
+  background-color: #ffab07;
+  color: white;
+  padding: 30px;
+}
+.botonInvierno2:hover{
   background-color: #ffab07;
   color: white;
   padding: 30px;
